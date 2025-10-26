@@ -8,7 +8,8 @@ public final class Scald extends SpecialMove {
     }
     @Override
     protected void applyOppEffects(Pokemon p){
-        if (!p.hasType(Type.FIRE) && Math.random() < 0.3){
+        if (!p.hasType(Type.FIRE) && Math.random() < 0.3)
+        {
             Effect.burn(p);
         }
 

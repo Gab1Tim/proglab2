@@ -7,13 +7,19 @@ public final class Rest extends StatusMove {
         super(Type.NORMAL, 0, 0);
     }
 
-    @Override
-    public void applySelfEffects(Pokemon p) {
-        int newHP = (int) (p.getStat(Stat.HP) - p.getHP());
-        p.setMod(Stat.HP, newHP);
 
-        Effect sleepEffect = new Effect().condition(Status.SLEEP).turns(2);
-        p.addEffect(sleepEffect);
+    @Override
+    protected void applySelfEffects(Pokemon p) {
+        int missingHP = (int) Math.round(p.getStat(Stat.HP) - p.getHP());
+        p.setMod(Stat.HP, missingHP);
+
+
+        Effect sleep = new Effect().condition(Status.SLEEP).turns(2);
+        p.addEffect(sleep);
+    }
+    @Override
+    protected String describe() {
+        return "uses Rest and falls asleep (fully healed)";
     }
 
 }
