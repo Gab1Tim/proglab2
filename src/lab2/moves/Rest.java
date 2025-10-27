@@ -10,12 +10,13 @@ public final class Rest extends StatusMove {
 
     @Override
     protected void applySelfEffects(Pokemon p) {
-        Effect restEffect = new Effect()
-                .stat(Stat.HP, (int)(p.getStat(Stat.HP) - p.getHP()))  // eksik HP kadar iyileştir
-                .condition(Status.SLEEP)   // uyku durumu uygula
-                .turns(2);                 // 2 tur sürer
+        int missingHP = (int) (p.getStat(Stat.HP) - p.getHP());
+        p.setMod(Stat.HP, missingHP);
 
-        p.addEffect(restEffect);
+        Effect sleep = new Effect()
+                .condition(Status.SLEEP)
+                .turns(2);
+        p.addEffect(sleep);
     }
 
     @Override
