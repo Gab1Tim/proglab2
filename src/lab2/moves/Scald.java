@@ -26,6 +26,6 @@ public final class Scald extends SpecialMove {
 
     @Override
     protected String describe(){
-        return "using Scald %30 percnt of burn chanses";
+        return "using Scald %30 percent of burn chanses";
     }
 }
