@@ -13,6 +13,10 @@ public final class Scald extends SpecialMove {
                     .chance(0.3)
                     .condition(Status.BURN);
             p.addEffect(effect);
+
+            if (effect.success()) {
+                System.out.println("ejfefo");
+            }
         }
     }
 

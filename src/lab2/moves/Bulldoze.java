@@ -11,7 +11,7 @@ public final class Bulldoze extends PhysicalMove {
         Effect effect = new Effect()
                 .stat(Stat.SPEED, -1);
 
-    p.addEffect(effect);
+        p.addEffect(effect);
     }
 
     @Override

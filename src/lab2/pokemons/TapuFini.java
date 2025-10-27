@@ -9,10 +9,7 @@ public class TapuFini extends Pokemon {
         super(name, level );
         setStats(70,75,115,95,130,85);
         setType(Type.WATER, Type.FAIRY);
-        addMove(new Superpower());
-        addMove(new DazzlingGleam());
-        addMove(new HornAttack());
-        addMove(new WoodHammer());
+        setMove(new Superpower(), new DazzlingGleam(),new HornAttack(),new WoodHammer());
     }
 }
 

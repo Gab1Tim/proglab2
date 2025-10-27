@@ -8,9 +8,6 @@ public class Milotic extends Pokemon {
         super(name, level);
         setStats(95,69,79,100,125,81);
         setType(Type.WATER);
-        addMove(new Scald());
-        addMove(new Confide());
-        addMove(new Swagger());
-        addMove(new Bulldoze());
+        setMove(new Swagger(), new Swagger(), new Swagger(), new Bulldoze());
     }
 }

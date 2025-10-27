@@ -8,8 +8,6 @@ public class Feebas extends Pokemon {
         super(name, level);
         setStats(20,15,20,10,55,80);
         setType(Type.WATER);
-        addMove(new Scald());
-        addMove(new Confide());
-        addMove(new Swagger());
+        setMove(new Swagger(), new Confide(), new Swagger());
     }
 }
