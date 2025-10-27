@@ -9,8 +9,11 @@ public final class Swagger extends StatusMove {
 
     @Override
     protected void applyOppEffects(Pokemon p) {
+        Effect effect = new Effect()
+                .stat(Stat.ATTACK, +2);
+        p.addEffect(effect);
+
         Effect.confuse(p);
-        p.setMod(Stat.ATTACK, +2);
     }
 
 

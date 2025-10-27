@@ -9,8 +9,11 @@ public final class Superpower extends PhysicalMove{
     }
     @Override
     protected void applySelfEffects(Pokemon p) {
-        p.setMod(Stat.ATTACK, -1);
-        p.setMod(Stat.DEFENSE, -1);
+        Effect selfEffect = new Effect()
+                .stat(Stat.ATTACK, -1)
+                .stat(Stat.DEFENSE, -1);
+
+        p.addEffect(selfEffect);
     }
 
     @Override

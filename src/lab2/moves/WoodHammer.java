@@ -10,7 +10,8 @@ public final class WoodHammer extends PhysicalMove {
 
     @Override
     protected void applySelfDamage(Pokemon p, double damage) {
-        p.setMod(Stat.HP, (int)(-damage / 3));
+        int recoil = (int)(damage / 3);
+        p.setMod(Stat.HP, -recoil);
     }
 
     @Override

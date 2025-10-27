@@ -8,9 +8,12 @@ public final class Bulldoze extends PhysicalMove {
     }
     @Override
     protected void applyOppEffects(Pokemon p) {
-        p.setMod(Stat.SPEED, -1);
+        Effect effect = new Effect()
+                .stat(Stat.SPEED, -1);
 
+    p.addEffect(effect);
     }
+
     @Override
     protected String describe(){
         return "using Bulldoze lowers opponent's Speed";
