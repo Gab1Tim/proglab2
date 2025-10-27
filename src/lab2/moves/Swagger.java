@@ -16,7 +16,6 @@ public final class Swagger extends StatusMove {
         Effect.confuse(p);
     }
 
-
     @Override
     protected String describe() {
         return "using Swagger (confuses opponent and raises Attack)";

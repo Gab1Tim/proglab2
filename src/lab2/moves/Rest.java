@@ -7,7 +7,6 @@ public final class Rest extends StatusMove {
         super(Type.NORMAL, 0, 0);
     }
 
-
     @Override
     protected void applySelfEffects(Pokemon p) {
         Effect restEffect = new Effect()
