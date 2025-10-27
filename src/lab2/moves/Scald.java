@@ -15,7 +15,7 @@ public final class Scald extends SpecialMove {
             p.addEffect(effect);
 
             if (effect.success()) {
-                System.out.println("ejfefo");
+                System.out.println("Scalds Burn Effect Succesful");
             }
         }
     }
